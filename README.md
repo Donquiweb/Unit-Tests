@@ -110,13 +110,36 @@ class StackTest extends PHPUnit_Framework_TestCase
 }
 </pre>
 
+# Python
+Unittest / PyUnit : https://docs.python.org/2/library/unittest.html  
+<pre>  
+import unittest
 
-# R  
-RUnit : https://cran.r-project.org/web/packages/RUnit/index.html
-documentation https://cran.r-project.org/web/packages/RUnit/vignettes/RUnit.pdf   
-Tutorial : http://wiki.inra.fr/wiki/cascisdi/Production/Tests+unitaires+sous+R  
+class TestStringMethods(unittest.TestCase):
+
+    def test_upper(self):
+        self.assertEqual('foo'.upper(), 'FOO')
+
+    def test_isupper(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_split(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+if __name__ == '__main__':
+    unittest.main()
+</pre>  
 
 # PL/SQL
 utPLSQL : https://utplsql.github.io/  
 utPLSQL v3 Cheat Sheet : https://www.cheatography.com/jgebal/cheat-sheets/utplsql-v3/pdf/  
 
+# R  
+RUnit : https://cran.r-project.org/web/packages/RUnit/index.html
+documentation https://cran.r-project.org/web/packages/RUnit/vignettes/RUnit.pdf   
+Tutorial : http://wiki.inra.fr/wiki/cascisdi/Production/Tests+unitaires+sous+R  
