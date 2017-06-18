@@ -34,10 +34,13 @@ public class MathTests
 
 # C++  
 cppUnit
-Tutorial : http://matthieu-brucher.developpez.com/tutoriels/cpp/cppUnit/  
-MSTest : Microsoft dispose de son framework. 
-NUnit : la version .NET du framework XUnit.
- 
+Tutorials : 
+http://matthieu-brucher.developpez.com/tutoriels/cpp/cppUnit/  
+https://msdn.microsoft.com/fr-fr/library/hh598953(v=vs.120).aspx  
+MSTest : Microsoft framework   
+https://docs.microsoft.com/fr-fr/dotnet/core/testing/unit-testing-with-mstest  
+NUnit : .NET version of XUnit framework  
+https://www.nunit.org/   
  
 # Java  
 JUnit  
@@ -111,7 +114,7 @@ class StackTest extends PHPUnit_Framework_TestCase
 # R  
 RUnit : https://cran.r-project.org/web/packages/RUnit/index.html
 documentation https://cran.r-project.org/web/packages/RUnit/vignettes/RUnit.pdf   
-
+Tutorial : http://wiki.inra.fr/wiki/cascisdi/Production/Tests+unitaires+sous+R  
 
 # PL/SQL
 utPLSQL : https://utplsql.github.io/  
