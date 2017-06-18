@@ -1,18 +1,63 @@
-# Unit-Tests
 # Unit Tests under several languages   
-https://fr.wikipedia.org/wiki/Test_unitaire
-
+fr: https://fr.wikipedia.org/wiki/Test_unitaire  
+en: https://en.wikipedia.org/wiki/Unit_testing  
+  
 # C#  
 JsUnit  
-
+https://openclassrooms.com/courses/programmez-en-oriente-objet-avec-c/les-tests-unitaires-5  
+Code :  
+<pre>
+public static class Math
+{
+    public static int Factorielle(int a)
+    {
+        if (a <= 1)
+            return 1;
+        return a * Factorielle(a - 1);
+    }
+}
+</pre>
+  
+Test :  
+  
+<pre>
+[TestClass]
+public class MathTests
+{
+    [TestMethod]
+    public void Factorielle_AvecValeur3_Retourne6()
+    {
+        // test à faire
+    }
+}
+</pre>
 
 # C++  
-Microsoft dispose de son framework, MSTest. D'autres framework de tests existent, comme le très connu NUnit qui est la version .NET du framework XUnit  
+cppUnit
+Tutorial : http://matthieu-brucher.developpez.com/tutoriels/cpp/cppUnit/  
+MSTest : Microsoft dispose de son framework. 
+NUnit : la version .NET du framework XUnit.
  
  
 # Java  
 JUnit  
+<pre>
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
+public class MyTests {
+
+    @Test
+    public void multiplicationOfZeroIntegersShouldReturnZero() {
+        MyClass tester = new MyClass(); // MyClass is tested
+
+        // assert statements
+        assertEquals("10 x 0 must be 0", 0, tester.multiply(10, 0));
+        assertEquals("0 x 10 must be 0", 0, tester.multiply(0, 10));
+        assertEquals("0 x 0 must be 0", 0, tester.multiply(0, 0));
+    }
+}
+</pre>
 
 # Javascript  
 JsUnit : http://unitjs.com/
@@ -32,6 +77,14 @@ test('Assertions with tape.', (assert) => {
   assert.end();
 });
 </pre>
+
+# jQuery
+QUnitJs http://qunitjs.com/  
+<pre>
+QUnit.test( "hello test", function( assert ) {
+  assert.ok( 1 == "1", "Passed!" );
+});
+</pre>   
 
 # PHP  
 PHPUnit : https://phpunit.de/   
@@ -61,3 +114,6 @@ documentation https://cran.r-project.org/web/packages/RUnit/vignettes/RUnit.pdf
 
 
 # PL/SQL
+utPLSQL : https://utplsql.github.io/  
+utPLSQL v3 Cheat Sheet : https://www.cheatography.com/jgebal/cheat-sheets/utplsql-v3/pdf/  
+
