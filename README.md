@@ -110,6 +110,18 @@ class StackTest extends PHPUnit_Framework_TestCase
 }
 </pre>
 
+# Prolog 
+PlUnit : http://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/plunit.html%27)  
+<pre>
+:- begin_tests(lists).
+:- use_module(library(lists)).
+
+test(reverse) :-
+        reverse([a,b], [b,a]).
+
+:- end_tests(lists).
+</pre>
+
 # Python
 Unittest / PyUnit : https://docs.python.org/2/library/unittest.html  
 <pre>  
